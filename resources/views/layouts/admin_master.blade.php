@@ -1,4 +1,6 @@
+
 Products<!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -6,16 +8,19 @@ Products<!DOCTYPE html>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>InventoryManagementSystem</title>        
-
+        <title>Elo-MIMS-Dash</title>        
         <link href="{{ asset('backend') }}/css/styles.css" rel="stylesheet" />
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+     
+     
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand">Inventory Management</a>
+            <div class="navibar-logo"><figure><img src="{{ asset('frontend') }}/images/elopar-logo.png" alt="sing up image"></figure></div>
+<!--            <a class="navbar-brand">Inventory Management</a>-->
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -34,10 +39,10 @@ Products<!DOCTYPE html>
                         <a class="dropdown-item" href="#">Settings</a>
                         <a class="dropdown-item" href="#">Activity Log</a>
                         <div class="dropdown-divider"></div>
-                    <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                        <a class="dropdown-item" href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
-                    </form>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <a class="dropdown-item" href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
+                        </form>
 
                     </div>
                 </li>
@@ -51,9 +56,13 @@ Products<!DOCTYPE html>
                             <div class="sb-sidenav-menu-heading">Core</div>
                             <a class="nav-link" href="{{ route('dashboard') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                Elo-MIMS-Dash
                             </a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
+<!--tree menu-->
+
+
+
 
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="false" aria-controls="collapseProducts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -67,7 +76,10 @@ Products<!DOCTYPE html>
                                     <a class="nav-link" href="{{ route('available.products') }}">Available Products</a>
                                 </nav>
                             </div>
-                            
+
+
+
+
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOrders" aria-expanded="false" aria-controls="collapseOrders">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Orders
@@ -94,6 +106,8 @@ Products<!DOCTYPE html>
                                 </nav>
                             </div>
 
+
+
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInvoice" aria-expanded="false" aria-controls="collapseInvoice">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Sales
@@ -105,6 +119,7 @@ Products<!DOCTYPE html>
                                     <a class="nav-link" href="{{ route('all.invoices') }}">Invoices List</a>
                                 </nav>
                             </div>
+
 
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAuthentication" aria-expanded="false" aria-controls="collapseAuthentication">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -121,20 +136,34 @@ Products<!DOCTYPE html>
                                     <a class="nav-link" href="{{ route('all.customers') }}">Customers List</a>
                                 </nav>
                             </div>
+ 
 
-                            
-                            
-                    </div>
+
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTest" aria-expanded="false" aria-controls="collapseAuthentication">
+                                <div class="sb-nav-link-icon"><i class="fas fa-poll"></i></div>
+                                Statistic
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+
+                            <div class="collapse" id="collapseTest" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{ route('all.user_logs') }}">User Log</a>
+                                </nav>
+                            </div>
+
+<!--tree menu-->
+
+                        </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-                
+
                 @yield('content')
 
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Shakil Ahmed, Ekram Asif & Safana Quyum Chowdhury</div>
+                            <div class="text-muted">Copyright &copy; Plambe</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
@@ -154,16 +183,7 @@ Products<!DOCTYPE html>
         <!-- <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script> -->
          <!-- <script src="{{ asset('backend') }}/assets/demo/datatables-demo.js"></script>  -->
-<!-- 
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-        <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
-        <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.colVis.min.js"></script> -->
-
+        <!-- 
                 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
                 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
                 <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
@@ -171,7 +191,16 @@ Products<!DOCTYPE html>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
                 <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
-                <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.colVis.min.js"></script>
+                <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.colVis.min.js"></script> -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.colVis.min.js"></script>
 
         @yield('script')
     </body>

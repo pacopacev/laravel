@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CustomerController extends Controller
 // {
@@ -121,7 +122,11 @@ class CustomerController extends Controller
 
         
     public function customersData(){
-        $customers = Customer::all();
+        $customers = app('App\Models\Customer')->getAllCustomers();
+        //dd($customers);
+        //$customers = Customer::all();
+        //$customers = DB::table('customers')->get();//plamen
+        //dd($customers);
         return view('Admin.all_customers',compact('customers'));
     }
          

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<!-- Смени заглавието на страницата -->		
+		<title>FREE.BG - One Page Scroller Template</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<style>
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.row {
+  margin-left:0px;
+  margin-right:0px;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+  margin-top:50px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+/* Стилове за карусела и менюто */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.carousel-caption {
+  z-index: 10;
+}
+
+#myCarousel  .item {
+  height: 400px;
+  background-color:#aaa;
+}
+
+#myCarousel img {
+/* ако искаме слайдовете да заемат цял екран
+  position: absolute;
+  top: 0;
+  left: 0; 
+  min-width: 100%;
+*/  
+  height: 400px;
+  margin: 0 auto;
+}
+
+#myCarousel {
+    text-align: center;
+	margin: 0 auto;
+}
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+.container .credit {
+  margin: 20px 0;
+}
+
+#footer {
+  background-color:#414141;
+}
+
+#footer a {
+  color:#efefef;
+}
+
+header {
+  background: #333;
+  color:#555;
+}
+
+header .dropdown-menu {
+  top:74px;
+  background: #ffcc33;
+  border-width:0;
+}
+
+h1 {
+  font-size:50px;
+}
+
+.logo {
+  font-size:40px;
+  position:absolute;
+  z-index:1200;
+  color:OrangeRed;
+  top:70px;
+  text-align:center;
+  width:100%;
+  text-shadow: 1px 0px 0px #686868, 1px 1px 0px #686868, 0px 1px 0px #686868, 
+    -1px 1px 0px #686868, -1px 0px 0px #686868, -1px -1px 0px #686868, 
+    0px -1px 0px #686868, 1px -1px 0px #686868, 1px 4px 5px #aeaeae; 
+  font-weight: bold;
+}
+
+#nav {
+  width: 100%;
+  position:static;
+  top:-32px;
+}
+
+#nav.affix {
+   position: fixed;
+   top: 0;
+   z-index:10;
+   -webkit-transition: all .6s ease-in-out;
+}
+
+#footer > .container {
+  
+}
+
+@media (min-width: 767px) {
+  .navbar-nav.nav-justified > li{
+      float:none;
+  }
+}
+  
+.navbar-nav {
+  margin: 1px 1px; 
+}  
+  
+.navbar-custom {
+    background-color: #555;
+	font-weight:700;
+    text-transform:uppercase;
+    border-width:0;
+}
+.navbar-custom  .navbar-nav>li>a {
+	color: #ddd;
+}
+.navbar-custom  .dropdown-menu li>a:hover {
+	color: #eee;
+}
+.navbar-custom  .navbar-nav li>a:hover, .navbar-nav li .open, .navbar-custom .navbar-nav .active a  {
+	background-color: #000;
+}
+.navbar-custom .navbar-nav>.dropdown>a .caret {
+	border-top-color: #999;
+	border-bottom-color: #999;
+}
+
+.navbar-collapse.in {
+    overflow-y: visible;
+}
+
+.navbar-toggle {
+	outline:0;
+}
+
+.divider {
+	height:50px;
+}
+
+.panel {
+	border-width:0;
+}
+
+@media (max-width: 768px) {
+	header {
+	
+	}
+}
+
+#map-canvas {
+  	width: 100%; 
+  	height: 300px;
+	margin: 0;
+	padding: 15px;
+}
+
+.scroll-top {
+   position:fixed;
+   bottom:0;
+   right:6%;
+   z-index:100;
+   background: #f2f3f2;
+   font-size:24px;
+   border-top-left-radius:3px;
+   border-top-right-radius:3px;
+}
+
+.scroll-top a:link,.scroll-top a:visited {
+  color:#222;
+} 
+ 
+/* Стилове за секциите между разделите */
+section {
+  color: #ffffff;
+  min-height: 400px;
+  height: auto !important;
+  height: 100%;
+  padding-top:100px;
+}
+
+.bg-1 {
+	background: url('//loremflickr.com/640/480/city') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.bg-2 {
+	background: url('//loremflickr.com/50/50') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.bg-3 {
+	background: url('//loremflickr.com/480/320/fashion') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.bg-4 {
+	padding-top:30px;
+    background-color:#e6e6e6;
+}
+
+/* Стилове за галерията */
+.panel .img-responsive {
+	min-height:270px;
+    max-height:270px;
+}
+
+.psp-center {
+	text-align: center;
+	margin: 0 auto;
+}
+
+		</style>
+
+	</head>
+	<body>
+<div id="wrap">
+<header class="masthead">
+
+<!-- Carousel. Настройки:
+ data-interval="6000" - интервал от време за смяна слайдовете в милисекунди; data-interval="false" - без автоматична смяна.
+ data-pause="hover" - дали да спира смяната на слайдовете при посочване с мишката; махни го, за да не спира.
+ Ако ще добавяте нови слайдове, трябва да копирате някои редове и да смените параметрите.
+-->
+    <div id="myCarousel" class="carousel slide" data-interval="6000" data-pause="hover">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+<!-- копирай долния ред и увеличавай числото (това е за индикаторните кръгчета, с които се сменят слайдовете) -->		
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+
+		
+	  </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="//loremflickr.com/800/400/food" alt="food">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2>Някакъв текст</h2>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="//loremflickr.com/700/400/transport" alt="transport">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2>Друг текст</h2>
+			  <p>Втори ред</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+<!-- за нов слайд копирай от тук... -->
+		<div class="item">
+          <img src="//loremflickr.com/900/400/cats" alt="cats">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2>Текст на първи ред</h2>
+              <p>Втори ред</p>
+			  <p>Могат да се добавят още слайдове</p>
+			  <p></p>
+            </div>
+          </div>
+        </div>
+<!-- ...до тук и смени изображението и текста -->
+
+
+      </div><!-- ...carousel-inner -->
+
+<!-- Смени логото -->	  
+      <div class="logo">
+		Начална страница на<br /><script>document.write(window.location.hostname);</script>
+	  </div> 
+      
+	  <!-- Controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>  
+    </div><!-- ...carousel -->
+</header>
+
+<!-- Меню... -->
+<div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav nav-justified">
+<!-- Промени менюто както ти харесва -->		
+          <li><a href="#section1">Начало</a></li>
+          <li><a href="#section2">За нас</a></li>
+          <li><a href="#section3">Галерия</a></li>
+          <li><a href="#section4">Адрес</a></li>
+          <li><a href="#section5">Коментари</a></li>
+<!-- падащо меню... -->		  
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Полезни връзки <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="//yahoo.com">Yahoo</a></li>
+              <li><a href="//google.com">Google</a></li>
+              <li><a href="//fb.com">Facebook</a></li>
+			  <li><a href="//twitter.com">Twitter</a></li>
+				<li role="separator" class="divider"></li>			  
+              <li><a href="//free.bg">FREE.BG</a></li>
+              <li><a href="#"><script>document.write(window.location.hostname);</script></a></li>
+            </ul>
+          </li>
+<!-- ...падащо меню -->		  
+        </ul>
+      </div>
+    </div>
+</div>
+<!-- ...Меню -->
+  
+<!-- Основно съдържание на страницата -->
+<!-- Раздел "Начало"... -->
+<div class="divider" id="section1"></div>
+  
+<div class="container">
+  <div class="col-sm-10 col-sm-offset-1">
+    <div class="page-header text-center">
+
+<!-- Смени текста -->	
+      <h1>Здравей, <script>document.write(window.location.hostname);</script> !</h1>
+	  
+    </div>
+    
+    <p class="lead text-center"> </p>
+
+<!-- Замести по-долното с твое съдържание... -->
+<div style="text-align: center; font-family: Arial, Helvetica">
+<table style="margin: 0 auto; border-style: solid; border-width: 1px; border-color: #111111; border-collapse: collapse; padding: 0; border-spacing: 0; width: 100px"><tr><td style="background-color: #ffffff">&nbsp;</td></tr><tr><td style="background-color: #008000">&nbsp;</td></tr><tr><td style="background-color: #ff0000">&nbsp;</td></tr></table>
+<br />
+<table style="margin: 0 auto; border-style: solid; border-width: 1px; border-collapse: collapse; "><tr>
+<td style="width: 50%; border: 1px solid black;">
+<br />
+<img src="//free.bg/images/admin/att.gif" style="vertical-align: middle; border: 0px" alt="Attention!" />
+ Това е началната страница на домейна <b><script>document.write(window.location.hostname);</script></b>. 
+<br /><br />
+<table style="margin: 0 auto; border-style: solid; border-width: 0px; width: 80%"><tr><td style="text-align: left">
+	<ul>
+		<li>Ако вие сте администратора на този сайт, отидете на <script>document.write("<a href='http://" + window.location.hostname + "/cgi-php/admin/admin.php'>АДМИНИСТРИРАНЕ</a>");</script> и качете съдържанието на вашия сайт на сървъра.</li>
+		<li>Ако виждате тази страница, след като сте качили съдържанието на вашия сайт, вероятно не сте заместили файла <b>index.html</b>.</li>
+		<li>Можете също така да редактирате тази страница и да я използвате като начална страница на вашия сайт, ако ви харесва.</li>
+	</ul>
+</td></tr></table>
+<br />
+<h6>Тази страница е създадена автоматично.</h6><br /><br />
+</td>
+<td style="width: 50%; border: 1px solid black;">
+<br />
+<img src="//free.bg/images/admin/att.gif" style="vertical-align: middle; border: 0px"  alt="Attention!" />
+ This is the placeholder for domain <b><script>document.write(window.location.hostname);</script></b>. 
+<br /><br />
+<table style="margin: 0 auto; border-style: solid; border: 0px; width: 80%"><tr><td style="text-align: left">
+	<ul>
+		<li>If you are the administrator of this site, go to <script>document.write("<a href='http://" + window.location.hostname + "/cgi-php/admin/admin.php'>ADMINISTRATION</a>");</script> and upload your site content.</li>
+		<li>If you see this page after uploading your site content, you probably have not replaced the <b>index.html</b> file.</li>
+		<li>You can also edit this webpage and use it as a homepage of your website, if you like it.</li>
+	</ul>
+</td>
+</tr></table>
+<br />
+<h6>This page has been automatically generated.</h6><br /><br />
+</td>
+</tr></table>
+<br /><b>free web hosting by <a href="//free.bg">FREE.BG</a> ® 1999-2022</b><br><!-- created by P.Petrov - the free.bg webmaster -->
+</div>	
+<!-- ...до тук -->
+	
+     
+    
+    <hr>
+    
+    <div class="divider"></div>
+    
+  </div>
+</div>
+<!-- ...Раздел "Начало" -->
+
+<div class="divider"></div>
+  
+<section class="bg-1">
+  <div class="col-sm-6 col-sm-offset-3 text-center"></div>
+</section>
+
+<!-- Раздел "За нас"... -->  
+<div class="divider" id="section2"></div>
+   
+<div class="row">
+	<div class="col-sm-10 col-sm-offset-1">
+		<h1>За нас</h1>
+		<hr>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum, lectus eget euismod euismod, erat leo interdum ex, et dapibus leo velit id libero. Integer rhoncus molestie aliquet. Nam ac justo non metus mollis aliquam quis vel ex. Duis non dolor sit amet augue ultricies lobortis. Duis maximus vitae lectus consectetur tincidunt. Duis nunc lorem, tincidunt id suscipit sed, convallis eu augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam eu nulla ac nunc placerat mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+		</p>
+		<p>
+			Sed porttitor ornare nisi eget placerat. Fusce a mauris id ligula ullamcorper ultrices ac ac sem. Fusce nec augue enim. Cras laoreet auctor libero, sed vehicula lorem. Praesent tincidunt condimentum dui, at vehicula lacus scelerisque vel. Cras viverra maximus porta. Phasellus quis venenatis leo. Phasellus pharetra nibh ac orci tristique, in condimentum ex tristique. Donec pellentesque odio a scelerisque ultricies. Integer laoreet nulla in quam porttitor commodo. Etiam varius lacus ut tortor suscipit, vel dignissim sapien molestie.
+		</p>
+		<p>
+			Fusce ligula orci, lobortis et tellus a, pellentesque mollis nibh. Fusce eu dui luctus mauris lacinia dapibus. Praesent porta, neque lacinia varius elementum, quam enim faucibus odio, quis volutpat libero dui egestas lorem. Maecenas ut dapibus erat. Aliquam pulvinar purus sit amet viverra aliquet. Vivamus ut lacinia odio. Morbi varius tristique augue vitae consectetur. Quisque id ligula dolor. Vestibulum maximus eros magna, iaculis egestas metus vehicula at. Vivamus ornare convallis dui, tempor tristique velit. Nulla augue ante, placerat ac auctor a, eleifend in mi. Nulla vitae scelerisque magna. Quisque et lobortis ante. Fusce vitae dolor velit. Proin eleifend, eros ac luctus convallis, erat urna semper eros, vel luctus tellus tortor ornare nulla.
+		</p>
+		<p>
+			и т.н. ...
+		</p>
+		<hr>
+      
+      <div class="divider"></div>
+      
+  	</div>
+</div>
+<!-- Раздел ..."За нас" -->
+
+<div class="divider"></div>
+<section class="bg-3">
+  <div class="col-sm-6 col-sm-offset-3 text-center">
+	<h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Галерия</h2>
+  </div>
+</section>
+
+<!-- Раздел "Галерия"... -->  
+<div class="divider" id="section3"></div>
+<div class="bg-4">
+  <div class="container">
+	<div class="row">
+	
+	   <div class="col-sm-4 col-xs-6">
+        <div class="panel panel-default">
+          <div class="panel-thumbnail">
+			<a href="#" title="Бизнес">
+				<img src="//loremflickr.com/480/320/business" class="img-responsive psp-center" alt="business">
+			</a>
+		  </div>
+          <div class="panel-body">
+            <p>Бизнес</p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-4 col-xs-6">
+      	<div class="panel panel-default">
+          <div class="panel-thumbnail">
+			<a href="#" title="Природа">
+				<img src="//loremflickr.com/200/600/nature" class="img-responsive psp-center" alt="nature">
+			</a>
+		  </div>
+          <div class="panel-body">
+            <p>Природа</p>
+            <p></p>
+          </div>
+        </div> 
+      </div>
+      
+      <div class="col-sm-4 col-xs-6">
+      	<div class="panel panel-default">
+          <div class="panel-thumbnail">
+			<a href="#" title="Техника">
+				<img src="//loremflickr.com/320/200/technics" class="img-responsive psp-center" alt="technics">
+			</a>
+		  </div>
+          <div class="panel-body">
+            <p>Техника</p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-4 col-xs-6">
+      	<div class="panel panel-default">
+          <div class="panel-thumbnail">
+			<a href="#" title="Храна">
+				<img src="//loremflickr.com/480/320/food" class="img-responsive img-rounded psp-center" alt="food">
+			</a>
+		  </div>
+          <div class="panel-body">
+            <p>Храна (<code>class="img-rounded"</code>)</p>
+            <p></p>
+          </div>
+        </div>
+      </div> 
+      
+      <div class="col-sm-4 col-xs-6">
+      	<div class="panel panel-default">
+          <div class="panel-thumbnail">
+			<a href="#" title="Спорт">
+				<img src="//loremflickr.com/480/320/sports" class="img-responsive img-circle psp-center" alt="sports">
+			</a>
+		  </div>
+          <div class="panel-body">
+            <p>Спорт (<code>class="img-circle"</code>)</p>
+            <p></p>
+          </div>
+        </div> 
+      </div> 
+      
+      <div class="col-sm-4 col-xs-6">
+      	<div class="panel panel-default">
+          <div class="panel-thumbnail">
+			<a href="#" title="Животни">
+				<img src="//loremflickr.com/480/320/animals" class="img-responsive img-thumbnail psp-center" alt="animals">
+			</a>
+		  </div>
+          <div class="panel-body">
+            <p>Животни (<code>class="img-thumbnail"</code>)</p>
+            <p></p>
+          </div>
+        </div>
+      </div> 
+      
+	</div><!-- ...row -->
+  </div><!-- ...container -->
+</div>
+<!-- ...Раздел "Галерия" -->
+
+<section class="bg-2">
+  <div class="col-sm-6 col-sm-offset-3 text-center"></div>
+</section>
+
+<!-- Раздел "Адрес"... -->
+<div class="divider" id="section4"></div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-1">
+  </div>
+</div>
+  
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-1">
+      <h1>Адрес</h1>
+  </div>
+  <div id="map-canvas" style="text-align: center;">
+		<!-- тук е картата - смени географски дължина и ширина  -->    
+		<img width="600" src="https://static-maps.yandex.ru/1.x/?lang=en-US&ll=27.8851585,43.1904088&z=12&l=map&size=600,300" alt="Yandex Map of 27.8851585,43.1904088">
+  </div>
+
+  <div class="col-sm-8"></div>
+  <div class="col-sm-3 pull-right">
+
+  <address>
+
+<!-- Смени името, адреса, телефоните и имейла. -->
+        Фирма ООД<br />
+        <span id="map-input">
+        9000 бул. "Аспарухов мост" 101<br />
+        Варна, България</span>
+
+		
+		<br />тел: (359) 99-9999999
+		<br />моб: (359) 99-9999999
+  </address>
+    
+      <address>
+        <strong>Ел. поща:</strong><br>
+        <a href="mailto:#">first.last@example.com</a>
+      </address>          
+  </div>
+  
+</div><!-- ...row -->
+<!-- ...Раздел "Адрес" -->
+
+<!-- Раздел "Коментари"... -->
+<div class="divider" id="section5"></div>  
+ <div class="row">
+  <hr>
+  <div class="col-sm-9 col-sm-offset-1" style="text-align: center;">
+   <h2>Коментари</h2>
+
+   <div id="fb-root"></div>
+   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v4.0"></script>
+   <div class="fb-comments" data-href="//free.bg/" data-width="" data-numposts="5"></div>
+
+  </div>
+ </div><!-- ...row -->
+<!-- ...Раздел "Коментари" -->
+
+<!-- долен колонтитул... -->  
+<div class="container">
+  	<div class="col-sm-8 col-sm-offset-2 text-center">
+      <ul class="list-inline center-block">
+		<li>Благодарение на</li>
+		<li><a href="//fsf.org/">FSF</a></li>
+		<li><a href="//w3.org/">W3C</a></li>
+        <li><a href="//getbootstrap.com/">Bootstrap</a></li>
+        <li><a href="//www.w3schools.com/">W3Schools</a></li>
+        <li><a href="//jquery.com/">jQuery</a></li>
+		<li><a href="//free.bg/">FREE.BG</a></li>
+		<li><a href="//fb.com/">FB</a></li>
+		<li><a href="//loremflickr.com/">Lorempixel</a></li>
+		<li><a href="//notepad-plus-plus.org/">Notepad++</a></li>
+		<li>и много други</li>
+      </ul>
+  	</div>
+</div>
+<!-- ...долен колонтитул -->  
+
+</div><!-- ...wrap -->
+
+<div id="footer">
+  <div class="container">
+    <p class="text-muted">Copyright ©2016-2022 FREE.BG GNU GPL</p>
+  </div>
+</div>
+
+<ul class="nav pull-right scroll-top">
+  <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+</ul>
+
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+  <div class="modal-content">
+	<div class="modal-header">
+		<button class="close" type="button" data-dismiss="modal">&times;</button>
+		<h3 class="modal-title"></h3>
+	</div>
+	<div class="modal-body">
+		<div id="modalCarousel" class="carousel slide">
+          <div class="carousel-inner">
+          </div>
+          <a class="carousel-control left" href="#modalCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          <a class="carousel-control right" href="#modalCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        </div>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-default" data-dismiss="modal">Затвори</button>
+	</div>
+   </div>
+  </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>	
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+// Carousel и меню...
+$('.carousel').carousel({interval:false});
+$('#nav').affix({
+      offset: {
+        top: $('header').height()-$('#nav').height()
+      }
+});	
+$('body').scrollspy({ target: '#nav' })
+$('.scroll-top').click(function(){
+  $('body,html').animate({scrollTop:0},1500);
+})
+$('#nav .navbar-nav li>a').click(function(){
+  var link = $(this).attr('href');
+  var posi = $(link).offset().top;
+  $('body,html').animate({scrollTop:posi},700);
+});
+// ...Carousel и меню
+
+// Модалния carousel на галерията...
+$('.panel .img-responsive').each(function(i) {
+  	var item = $('<div class="item"></div>');
+    var itemDiv = $(this).parent('a');
+    var title = $(this).parent('a').attr("title");
+    item.attr("title",title);
+  	$(itemDiv.html()).appendTo(item);
+  	item.appendTo('#modalCarousel .carousel-inner'); 
+    if (i==0) item.addClass('active');
+});
+
+$('#modalCarousel').carousel({interval:false});
+$('#modalCarousel').on('slid.bs.carousel', function () {
+	$('.modal-title').html($(this).find('.active').attr("title"));
+});
+$('.panel-thumbnail>a').click(function(e){
+    e.preventDefault();
+    var idx = $(this).parents('.panel').parent().index();
+  	var id = parseInt(idx);
+  	$('#myModal').modal('show');
+    $('#modalCarousel').carousel(id);
+  	return false;
+});
+// ...Модалния carousel на галерията
+});
+
+// махни по-долния ред, ако не искаш слайдовете да се сменят автоматично
+$('.carousel').carousel();
+
+</script>
+
+
+<!-- 
+Пипай внимателно и си прави винаги
+	резервни копия на работещите варианти,
+		за да може лесно да продължиш напред,
+			ако (когато) нещата се оплескат.
+				Успех! П.Петров
+-->
+	</body>
+</html>

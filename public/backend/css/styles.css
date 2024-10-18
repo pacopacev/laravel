@@ -10032,7 +10032,7 @@ body {
   display: flex;
 }
 #layoutSidenav #layoutSidenav_nav {
-  flex-basis: 225px;
+  flex-basis: 180px;
   flex-shrink: 0;
   transition: transform 0.15s ease-in-out;
   z-index: 1038;
@@ -10089,7 +10089,7 @@ body {
   z-index: 1039;
 }
 .sb-nav-fixed #layoutSidenav #layoutSidenav_nav {
-  width: 225px;
+  width: 180px;
   height: 100vh;
   z-index: 1038;
 }
@@ -10246,4 +10246,19 @@ body {
 }
 .sb-sidenav-light .sb-sidenav-footer {
   background-color: #e9ecef;
+}
+
+.navibar-logo {
+    width: 165px;
+    height: 35px; 
+    margin-left: 7px;
+    background-color: white;
+    padding: 3px;
+    border-radius: 2px;
+    text-align: center;   
+}
+
+.navibar-logo img {
+   width: 80%;
+   height: 30px;
 }
